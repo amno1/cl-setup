@@ -1,0 +1,3 @@
+* About
+
+Just my personal setup for CL in Emacs.
