@@ -186,6 +186,23 @@ If not specified, ASDF-BUFFER defaults to current buffer."
 ;;     (save-buffer))
 ;;   (call-interactively #'sly-compile-and-load-file policy))
 
+(defun cl-extras-compile-and-load-file (&optional policy)
+  (interactive "P")
+  (when (buffer-modified-p)
+    (save-buffer))
+  (call-interactively 'slime-compile-and-load-file policy))
+
+;;;###autoload
+(define-minor-mode cl-extras
+  "Add some extras to lisp-mode and slime-mode"
+  :lighter " CL"
+  (cond
+   (cl-extras
+    (define-key slime-mode-map (kbd "C-c C-k")
+                #'cl-extras-compile-and-load-file))
+   (t
+    (define-key slime-mode-map (kbd "C-c C-k")
+                #'slime-compile-and-load-file))))
 
 (provide 'cl-setup)
 ;;; cl-setup.el ends here
