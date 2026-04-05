@@ -4,7 +4,7 @@
 
 ;; Author: Arthur Miller <arthur.miller@live.com>
 ;; Version: 0.6.0
-;; Package-Requires: ((slime) (company) (yasnippet) (paredit) (sotlisp) (helm) (helm-pages) (page-break-lines))
+;; Package-Requires: ((common-lisp-snippets) (slime) (company) (yasnippet) (paredit) (sotlisp) (helm) (helm-pages) (page-break-lines))
 ;; Keywords: convenience
 
 ;; This program is free software; you can redistribute it and/or modify
